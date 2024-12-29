@@ -1,0 +1,38 @@
+\startenvironment env_main
+  \definefontfeature[default][mode=node,liga=yes,kern=yes,tlig=yes,trep=yes]
+  
+  \setupbodyfont[jetbrainsmono,10pt]
+  
+  \definecolor[minervablue][x=002FA7]
+  
+  \startuseMPgraphic{FooterTextBackground_MP}
+    randomseed:=1;
+    lmt_placeholder
+      [
+        color="minervablue",
+        width=\overlaywidth,
+        height=\overlayheight,
+        alternative="square".
+      ];
+  \stopuseMPgraphic
+  
+  \defineoverlay[FooterTextBackground_OL][\useMPgraphic{FooterTextBackground_MP}]
+  
+  \setupbackgrounds[footer][text][background=FooterTextBackground_OL]
+  
+  \setupcolors[textcolor=minervablue]
+  
+  \setupheadertexts[]
+  \setupheadertexts[Series][pagenumber]
+  
+  \setuphead[title][style=bfc]
+  \setuphead[section][style=bfa]
+  
+  \setupcombinedlist[content][list={section,subsection,subsubsection}]
+  
+  \setupindenting[yes,medium]
+  
+  \setupinteraction[state=start,style=,color=,contrastcolor=,]
+  
+  \placebookmarks[section,subsection,subsubsection]
+\stopenvironment
