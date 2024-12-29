@@ -1,0 +1,36 @@
+\setupbodyfont
+  [newcomputermodern]
+\definecolor
+  [ceres]
+  [x=FF7518]
+\startMPpage
+  randomseed:=1;
+  lmt_placeholder
+    [
+      color="ceres",
+      width=72pt,
+      height=72pt.
+    ];
+  draw lmt_text
+    [
+      style="bold",
+      color="white",
+      text="Ceres",
+      position=(36pt,36pt).
+    ];
+  draw lmt_outline
+    [
+      text="\txx Minerva",
+      drawcolor="white",
+      align="normal",
+      style="smallcaps".
+    ];
+  draw lmt_outline
+    [
+      text="\txx Minerva",
+      drawcolor="white",
+      align="normal",
+      style="smallcaps".
+    ]
+    rotatedaround((36pt,36pt),180);
+\stopMPpage
