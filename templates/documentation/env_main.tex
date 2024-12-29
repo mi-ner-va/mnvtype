@@ -1,0 +1,46 @@
+\startenvironment env_main
+  % \setscript[hanzi]
+  % \definefontfallback[Sans][name:notosanscjksc-regular][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[SansBold][file:notosanscjksc-bold][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[SansItalic][file:notosanscjksc-regular][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[SansBoldItalic][file:notosanscjksc-bold][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[Mono][file:notosansmonocjksc-regular][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[MonoBold][file:notosansmonocjksc-bold][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[MonoItalic][file:notosansmonocjksc-regular][cjksymbolsandpunctuation,cjkunifiedideographs]
+  % \definefontfallback[MonoBoldItalic][file:notosansmonocjksc-bold][cjksymbolsandpunctuation,cjkunifiedideographs]
+
+  \setupbodyfont[notosans,8pt]
+
+  \definecolor[lightorange][x=FF9E64]
+  \definecolor[lime][x=9ECE6A]
+  \definecolor[aqua][x=B4F9F8]
+  \definecolor[turquoise][x=2AC3DE]
+  \definecolor[lightblue][x=C0CAF5]
+  \definecolor[periwinkle][x=A9B1D6]
+  \definecolor[bluegray][x=414868]
+  \definecolor[indigo][x=1A1B26]
+
+  \setupbackgrounds[page][background=color,backgroundcolor=indigo]
+
+  \setupcolors[textcolor=periwinkle]
+
+  \setupindenting[yes,medium]
+
+  \setupinteraction[state=start,color=aqua,contrastcolor=aqua]
+  \placebookmarks[section,subsection,subsubsection]
+
+  \setupheader[color=aqua]
+
+  \setuphead[color=lime]
+
+  \setupitemgroup[color=turquoise,headstyle=bf]
+
+  \setuptextbackground[backgroundcolor=bluegray,corner=round,framecolor=bluegray]
+
+  \setuplinenumbering[color=lightorange]
+
+  \setuptype[left=\starttextbackground,right=\stoptextbackground,color=lightblue]
+  \setuptyping[color=lightblue,before=\starttextbackground,after=\stoptextbackground,strip=yes]
+  \definetyping[CPP][continue=yes,numbering=line]
+  \definetyping[TXT]
+\stopenvironment
