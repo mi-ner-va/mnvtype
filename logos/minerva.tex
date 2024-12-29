@@ -1,0 +1,21 @@
+\setupbodyfont
+  [newcomputermodern]
+\definecolor
+  [minerva]
+  [x=002FA7]
+\startMPpage
+  randomseed:=1;
+  lmt_placeholder
+    [
+      color="minerva",
+      width=72pt,
+      height=72pt.
+    ];
+  draw lmt_text
+    [
+      style="bold",
+      color="white",
+      text="Minerva",
+      position=(36pt,36pt).
+    ];
+\stopMPpage
