@@ -1,0 +1,41 @@
+\startenvironment env_main
+  \definefontfeature[default][mode=node,liga=yes,kern=yes,tlig=yes,trep=yes]
+  \definefontfeature[stixtwo:mathextra][ss08=yes]
+  \setupbodyfont[stixtwo]
+
+  \setuphead[title][style=scc,align=center]
+  \setuphead[subject][style=sca,align=center]
+
+  \setupindenting[yes,medium]
+  \setupnotation[footnote][number=no]
+  \setupfloat[location=force]
+
+  \setupmathematics[ucgreek=italic,italics=yes,differentiald=upright]
+  \setupformula[location=left]
+
+  \setupitemgroup[width=2em,distance=0.5em,symalign=left,headstyle=bold]
+  \defineitemgroup[enumerate]
+  \setupitemgroup[enumerate][1][nostopper,a][left=(,right=)]
+  \setupitemgroup[enumerate][2][r]
+
+  \setupenumeration[title=yes,titlestyle=normal,headcommand=\groupedcommand{}{.},alternative=serried,width=fit]
+  \defineenumeration[problem][text=Problem]
+  \defineenumeration[proof][number=no,text=Proof,closesymbol=\QED,headstyle=it]
+  \defineenumeration[solution][number=no,text=Solution,headstyle=it]
+
+  % \definemathfunction[]
+  \definemathmatrix[bmatrix][simplecommand=bmatrix,fences=bracket]
+  \let\checkedtextcelsius℃
+
+  \startuseMPgraphic{Background_MP}
+    lmt_placeholder [
+      color="white",
+      width=\overlaywidth,
+      height=\overlayheight,
+      reduction=0.8,
+      alternative="triangle".
+    ];
+  \stopuseMPgraphic
+  \defineoverlay[Background_OL][\useMPgraphic{Background_MP}]
+  \setupbackgrounds[paper][background=Background_OL]
+\stopenvironment
